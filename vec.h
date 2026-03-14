@@ -17,6 +17,14 @@ struct Vec {
   ~Vec() {
     delete[] data;
   }
+
+  T& operator[](size_t index) {
+    return data[index];
+  }
+
+  const T& operator[](size_t index) const {
+    return data[index];
+  }
 };
 
 #endif
